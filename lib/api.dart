@@ -8,6 +8,8 @@ void main() {
 }
 
 class AQIMonitorApp extends StatelessWidget {
+  const AQIMonitorApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,6 +20,8 @@ class AQIMonitorApp extends StatelessWidget {
 }
 
 class AirQualityScreen extends StatefulWidget {
+  const AirQualityScreen({super.key});
+
   @override
   _AirQualityScreenState createState() => _AirQualityScreenState();
 }
@@ -140,7 +144,6 @@ class _AirQualityScreenState extends State<AirQualityScreen> {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: fetchAirQuality,
-                    child: Text("Refresh"),
                     style: ElevatedButton.styleFrom(
                       padding:
                           EdgeInsets.symmetric(horizontal: 30, vertical: 12),
@@ -148,6 +151,7 @@ class _AirQualityScreenState extends State<AirQualityScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
+                    child: Text("Refresh"),
                   ),
                 ],
               ),
